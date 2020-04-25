@@ -27,7 +27,6 @@ public class Main {
     	
     	case 1 :
     	
-    		
     		System.out.println("\t\t\tPLEASE FOLLOW THE ENROLLMENT PROCESS");
         	//Scanner in = new Scanner(System.in);
         	//TotalStudents = in.nextInt();
@@ -39,10 +38,12 @@ public class Main {
         		students[n].paidPayment();
         		students[n].AboutMakrs();
         		students[n].AboutPassorFail();
+        		students[n].resultfinal();
         		System.out.println("-------xxxx------");
         		System.out.println("\n");
         		System.out.println("Your Final Info:");
         		System.out.printf(students[n].toFinalInfo());
+        		students[n].resultfinal();
         	}
         
         break;
@@ -57,8 +58,8 @@ public class Main {
     	for(int i=0;i<1;i++)
     	{
     				
-    		System.out.println(students[i].toFinalInfo());		
-    		
+    		System.out.println(students[i].toFinalInfo());			
+    	
     	}
     	
     	break;

@@ -59,7 +59,7 @@ public class  StudentInfo {
 		
 	
 	public void BlanceAmount() {
-		System.out.println("Your Total Amount is: Rs: " + tutionfee);
+		System.out.println("Your Total Amount is: Rs: 5000");
 		
 	}
 		
@@ -99,15 +99,18 @@ public class  StudentInfo {
 		System.out.println("Your Total Marks are: " + sum);
 		
 		System.out.println("\n");
+	}
+	
+		public void resultfinal() {
 	    
 	    if(sum > 250) {
 	   
 	    	
-	    	System.out.println("Your Final result is: PASS");
+	    	System.out.println("Your Final result is: \nPASS");
 	    	System.out.println("\n");
 	    }
 	    else {
-	    	System.out.println("Your Final result is: FAil");
+	    	System.out.println("Your Final result is: \nFAil");
 	    	System.out.println("\n");
 	    	
 	    }    		
@@ -115,19 +118,19 @@ public class  StudentInfo {
 	
 	public String toFinalInfo() {
 		System.out.println("\n");
-		return ("Name: " + firstName + " " + Lastname + "\nStudentID: " + StudentID + "\nCourses Enrolled:\n1.English.\n2.Urdu.\n3.Java.\n4.Pst.\n5.Math.");
+		return ("Name: " + firstName + " " + Lastname + "\nStudentID: " + StudentID + "\nCourses Enrolled:\n1.English.\n2.Urdu.\n3.Java.\n4.Pst.\n5.Math.\n");
 		
 			
 		}
 	public void DumyData() {
 	
-		System.out.println("Name: Sara Khan\nStudentID: 1009\nCourses Enrolled:\nEnglish\nUrdu\nMath\nJava\nPst.");
+		System.out.println("Name: Sara Khan\nStudentID: 1009\nCourses Enrolled:\n1.English\n2.Urdu\n3.Math\n4.Java\n5.Pst.");
 		System.out.println("\n");
-		System.out.println("Name: Maria Rohail\nStudentID: 1002\nCourses Enrolled:\nEnglish\nUrdu\nMath\nJava\nPst.");
+		System.out.println("Name: Maria Rohail\nStudentID: 1002\nCourses Enrolled:\n1.English\n2.Urdu\n3.Math\n4.Java\n5.Pst.");
 		System.out.println("\n");
-		System.out.println("Name: Ali Khan\nStudentID: 1003\nCourses Enrolled:\nEnglish\nUrdu\nMath\nJava\nPst.");
+		System.out.println("Name: Ali Khan\nStudentID: 1003\nCourses Enrolled:\n1.English\n2.Urdu\n3.Math\n4.Java\n5.Pst.");
 		System.out.println("\n");
-		System.out.println("Name: Saana Emaan\nStudentID: 1006\nCourses Enrolled:\nEnglish\nUrdu\nMath\nJava\nPst.");
+		System.out.println("Name: Saana Emaan\nStudentID: 1006\nCourses Enrolled:\n1.English\n2.Urdu\n3.Math\n4.Java\n5.Pst.");
 	    }
 	
 		}
