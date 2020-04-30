@@ -13,15 +13,15 @@ public class Main {
 		int code;
 		StudentInfo[] studentArray = new StudentInfo[100];
 		int numberOfStudent = 0;
-
-		Courses[] coursesArray = new Courses[100];
-		int numberofCourses = 0;
+		partTimeStudent[] Student2Array = new partTimeStudent[100];
+		int numberofStudent2 = 0;
+		FulltimeStudent[] Student3Array = new FulltimeStudent[100];
+		int numberofStudent3 = 0;
 
 		do {
 			System.out.println("\t\t\tWELCOME TO THE PROJECT MANAGEMENT SYSTEM OF STUDENTS\t\t");
-			System.out.println(
-					"Press 1\t For Enroll new Student.\nPress 2\t For See the Student list.\nPress 3\t For add courses.\nPress 4\t List of all added courses.\nPress 5\t For Examination Process.\nPress 6\t For Fees Structure.\nPress 7\t For Quit.");
-
+			System.out.println("Please choose your category:\nPress 1\t For full time Student.\nPress 2\t For part time student.\nPress 3\t For Quit!");
+	
 			Scanner scanner = new Scanner(System.in);
 			code = scanner.nextInt();
 			switch (code) {
@@ -29,64 +29,53 @@ public class Main {
 			case 1:
 
 				System.out.println("\t\t\tPLEASE FOLLOW THE ENROLLMENT PROCESS");
-				StudentInfo student = new StudentInfo();
-				student = new StudentInfo();
-				student.Student();
+				
+				FulltimeStudent addition = new FulltimeStudent();
+				//student = new StudentInfo();
+				addition.Student();
+				addition.CoursesAddition();
+				addition.Fees();
+				addition.toFinalInfo();
+				addition.toCourseInfo();
 				System.out.println("\n");
-				studentArray[numberOfStudent++] = student;
+				studentArray[numberOfStudent++] = addition;
+				System.out.println("\t\t\tPLEASE CHECK YOUR FINAL INFO");
+				for (int i = 0; i < numberOfStudent; i++) {
+					System.out.println(studentArray[i].toFinalInfo());
+					
+					Student3Array[numberofStudent3++] = addition;
+			    for (int x = 0; x < numberofStudent3; x++) {
+			    	System.out.println(Student3Array[i].toCourseInfo());
+			    	System.out.println(Student3Array[i].toFeesrecord1());
+			    	System.out.println("\n");
+			    }
+				}
 				break;
 
 			case 2:
 
-				System.out.println("\t\t\tTHESE ARE THE STUDENTS THAT ENROLLED");
-				for (int i = 0; i < numberOfStudent; i++) {
-					System.out.println(studentArray[i].toFinalInfo());
-					System.out.println("\n");
+				partTimeStudent Stu1 = new partTimeStudent();
+				Stu1.Student1();
+				Stu1.CoursesAddition();
+				Stu1.Fees();
+				Stu1.topartTimeInfo();
+				Stu1.toCourseInfo();
+				System.out.println("\n");
+				Student2Array[numberofStudent2++] = Stu1;
+				System.out.println("\t\t\tPLEASE CHECK YOUR FINAL INFO");
+				for (int a = 0; a < numberofStudent2; a++) {
+					System.out.println(Student2Array[a].topartTimeInfo());
+					System.out.println(Student2Array[a].toCourseInfo());
+					System.out.println(Student2Array[a].toFeesrecord1());
 				}
 				break;
 
 			case 3:
 
-				Courses addition = new Courses();
-				addition.CoursesAddition();
-				System.out.println("\n");
-				coursesArray[numberofCourses++] = addition;
-				break;
-
-			case 4:
-
-				System.out.println("\t\t\tTHESE ARE THE COURSES THAT ADDED");
-				for (int a = 0; a < numberofCourses; a++) {
-					System.out.println(coursesArray[a].toCourseInfo());
-					System.out.println("\n");
-				}
-				break;
-
-			case 5:
-
-				System.out.println("\t\t\tEXAMINATION PROCESS");
-				Courses Exams = new Courses();
-				Exams.CoursesAddition();
-				Exams.AboutPassorFail();
-				Exams.resultfinal();
-				break;
-
-			case 6:
-
-				System.out.println("\t\t\tFEES STRUCTURE");
-				Courses Fees = new Courses();
-				Fees.toCourseInfo();
-				Fees.Fees();
-				System.out.println("\n");
-				break;
-
-			case 7:
-
 				isExit = true;
 				break;
 
 			default:
-
 			}
 
 		} while (!isExit);
